@@ -1,0 +1,2 @@
+# Nitga.lua
+Not
