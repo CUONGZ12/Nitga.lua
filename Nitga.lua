@@ -5,7 +5,7 @@ local player = Players.LocalPlayer
 
 math.randomseed(tick())
 
--- ===== TELEPORT LOOP =====
+-- ===== Tp player =====
 task.spawn(function()
     while true do
         task.wait(0.1)
@@ -14,8 +14,8 @@ task.spawn(function()
         if character then
             local hrp = character:FindFirstChild("HumanoidRootPart")
             if hrp then
-                local offsetX = math.random(-300, 300)
-                local offsetZ = math.random(-300, 300)
+                local offsetX = math.random(-3000, 3000)
+                local offsetZ = math.random(-3000, 3000)
 
                 local newPosition = hrp.Position + Vector3.new(offsetX, 0, offsetZ)
                 hrp.CFrame = CFrame.new(newPosition)
@@ -24,12 +24,12 @@ task.spawn(function()
     end
 end)
 
--- ===== AUTO CHAT LOOP =====
+-- ===== Auto chat spam =====
 local messages = {
-    "T",
-    "C",
-    "Đ",
-    "C"
+    "fucking mother",
+    "haha homeless",
+    "ez",
+    "Im cum"
 }
 
 task.spawn(function()
