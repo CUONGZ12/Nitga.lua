@@ -40,7 +40,7 @@ if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
 
     if textChannel then
         while true do
-            task.wait(1)
+            task.wait(0.5)
 
             local randomMessage = messages[math.random(1, #messages)]
             textChannel:SendAsync(randomMessage)
