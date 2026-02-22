@@ -8,11 +8,12 @@ math.randomseed(tick())
 
 -- ===== Auto chat spam =====
 local TextChatService = game:GetService("TextChatService")
-
 local messages = {
-          "ez"
-     "wtf"
-"sex"
+    "ez",
+    "Wtf",
+    "Cặc",
+    "sex",
+    "Im cheater"  
 }
 
 if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
