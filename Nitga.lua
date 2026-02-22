@@ -14,8 +14,8 @@ task.spawn(function()
         if character then
             local hrp = character:FindFirstChild("HumanoidRootPart")
             if hrp then
-                local offsetX = math.random(-3000, 3000)
-                local offsetZ = math.random(-3000, 3000)
+                local offsetX = math.random(-300, 300)
+                local offsetZ = math.random(-300, 300)
 
                 local newPosition = hrp.Position + Vector3.new(offsetX, 0, offsetZ)
                 hrp.CFrame = CFrame.new(newPosition)
@@ -26,10 +26,10 @@ end)
 
 -- ===== Auto chat spam =====
 local messages = {
-    "fucking mother",
-    "haha homeless",
+    "wtf",
+    "homeless",
     "ez",
-    "Im cum"
+    "noob"
 }
 
 task.spawn(function()
