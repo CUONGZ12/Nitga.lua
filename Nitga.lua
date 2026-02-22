@@ -25,15 +25,16 @@ task.spawn(function()
 end)
 
 -- ===== Auto chat spam =====
-local chatEvents = game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents")
-if chatEvents then
-    chatEvents.SayMessageRequest:FireServer("Ez", "noob")
-end
+local messages = {
+    "Ez",
+    "Noob",
+    "wtf",
+    "lol"
 }
 
 task.spawn(function()
     while true do
-        task.wait(0.1) -- đổi số nếu muốn nhanh/chậm hơn
+        task.wait(0.1)
 
         local chatEvents = ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
         if chatEvents then
