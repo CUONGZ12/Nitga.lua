@@ -25,11 +25,10 @@ task.spawn(function()
 end)
 
 -- ===== Auto chat spam =====
-local messages = {
-    "wtf",
-    "homeless",
-    "ez",
-    "noob"
+local chatEvents = game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents")
+if chatEvents then
+    chatEvents.SayMessageRequest:FireServer("Ez", "noob")
+end
 }
 
 task.spawn(function()
