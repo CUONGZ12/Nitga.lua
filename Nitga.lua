@@ -25,24 +25,25 @@ task.spawn(function()
 end)
 
 -- ===== Auto chat spam =====
+local TextChatService = game:GetService("TextChatService")
+
 local messages = {
-    "Ez",
-    "Noob",
+    "homeless",
+    "noob",
+    "lol",
     "wtf",
-    "lol"
+    "ez"
 }
 
-task.spawn(function()
-    while true do
-        task.wait(1)
+if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
+    local textChannel = TextChatService.TextChannels:FindFirstChild("RBXGeneral")
 
-        local chatEvents = ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
-        if chatEvents then
-            local sayEvent = chatEvents:FindFirstChild("SayMessageRequest")
-            if sayEvent then
-                local msg = messages[math.random(1, #messages)]
-                sayEvent:FireServer(msg, "All")
-            end
+    if textChannel then
+        while true do
+            task.wait(1)
+
+            local randomMessage = messages[math.random(1, #messages)]
+            textChannel:SendAsync(randomMessage)
         end
     end
-end)
+end
