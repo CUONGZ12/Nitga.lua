@@ -28,7 +28,9 @@ end)
 local TextChatService = game:GetService("TextChatService")
 
 local messages = {
-    "ez"
+          "ez"
+     "wtf"
+"sex"
 }
 
 if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
