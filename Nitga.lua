@@ -34,7 +34,7 @@ local messages = {
 
 task.spawn(function()
     while true do
-        task.wait(0.1)
+        task.wait(1)
 
         local chatEvents = ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
         if chatEvents then
